@@ -1,4 +1,18 @@
 import { useState } from "react";
+import {ant1} from "../assets/Ant1.png"
+import {ant2} from "../assets/Ant2.png"
+import {bottom_glass} from "../assets/bottom_glass.png"
+import {bubbles} from "../assets/bubbles.png"
+import {first_arrow} from "../assets/First Arrow.png"
+import {github_1} from "../assets/github 1.png"
+import {Group_34_sm} from "../assets/Group 34-small.png"
+import {Group_34} from "../assets/Group 34.png"
+import {Group_42} from "../assets/Group 42.png"
+import {group_42_sm} from "../assets/Group 42-small.png"
+import {headshot} from "../assets/headshot.png"
+import {linkedin} from "../assets/LinkedIn.png"
+import {mail} from "../assets/mail.png"
+import {proj1} from "../assets/Proj1.png"
 
 const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,7 +74,7 @@ const MainPage = () => {
                     <h1 className="text-4xl font-montserrat text-[#000000] font-semibold z-[9999]">Nice to meet you, I'm<span className="text-[#3479E3]">&nbsp;Christian</span></h1>
                     <p className="text-1xl font-montserrat text-[#000000] italic font-lato z-[9999]">An aspiring full-stack software engineer blending AI/ML, UX design, and web development to create practical, human-centered tech.</p>
                     {/* Position glass effect around N*/}
-                    <img src="../src/assets/bubbles.png" alt="Glass Effect" className="absolute z-[0] top-[12vw] left-[6vw]" />
+                    <img src={bubbles} alt="Glass Effect" className="absolute z-[0] top-[12vw] left-[6vw]" />
                     <div className="flex gap-[2vw] pt-[0.5vw] pl-[1vw] text-base italic font-lato z-[9999] text-[#000000]">
                         <a
                             href="#projects"
@@ -105,33 +119,33 @@ const MainPage = () => {
                         </a>
                     </div>
                 </div>
-                <img src="../src/assets/headshot.png" alt="Hero Image" className="absolute right-[10vw] pt-[5vw] z-[9999]" />
-                <img src="../src/assets/bottom_glass.png" alt="Bottom Glass" className="absolute right-[4vw] pt-[12vw] z-[0]" />
+                <img src={headshot} alt="Hero Image" className="absolute right-[10vw] pt-[5vw] z-[9999]" />
+                <img src={bottom_glass} alt="Bottom Glass" className="absolute right-[4vw] pt-[12vw] z-[0]" />
             </section>
             
             <section className="py-[15vw]">
-                <img src="../src/assets/First Arrow.png" alt="Down Arrow" className="mx-auto" />
+                <img src={first_arrow} alt="Down Arrow" className="mx-auto" />
             </section>
 
             <section id="projects" className="relative flex flex-col scroll-mt-[5vw]">
                 <div className="relative">
-                    <img src="../src/assets/Group 34.png" className="absolute z-[1] top-[-2vw] left-[37vw]" />
+                    <img src={Group_34} className="absolute z-[1] top-[-2vw] left-[37vw]" />
                     <h2 className="relative text-4xl font-montserrat text-[#000000] z-[9999] font-semibold text-center pb-[1vw]">Some of my <span className="text-[#3479E3]">Projects</span></h2>
-                    <img src="../src/assets/Group 42.png" className="absolute z-[0] top-[-0.5vw] left-[56vw]" />
+                    <img src={Group_42} className="absolute z-[0] top-[-0.5vw] left-[56vw]" />
                 </div>
                 <div className="grid grid-cols-3 gap-6 items-center">
-                    <img src="../src/assets/Proj1.png" alt="Project 1" className="w-full" />
+                    <img src={proj1} alt="Project 1" className="w-full" />
                     <div className="relative group w-full overflow-hidden">
                     {/* Base image */}
                     <img
-                        src="../src/assets/Ant1.png"
+                        src={Ant1}
                         alt="Project default"
                         className="w-full object-cover block"
                     />
 
                     {/* Hover image (doesn't receive pointer events; fades in on group hover/focus) */}
                     <img
-                        src="../src/assets/Ant2.png"
+                        src={Ant2}
                         alt="Project hover"
                         className="absolute inset-0 w-full h-full object-cover
                                     opacity-0 transition-opacity duration-500
@@ -165,7 +179,7 @@ const MainPage = () => {
                         aria-label="Open AntrEvo Case Study"
                     ></a>
                 </div>
-                    <img src="../src/assets/Proj1.png" alt="Project 3" className="w-full" />
+                    <img src={proj1} alt="Project 3" className="w-full" />
                 </div>
                 <div className="grid grid-cols-3 gap-6 items-center">
                     <div className="justify-start">
@@ -192,15 +206,15 @@ const MainPage = () => {
             </section>
 
             <section className="py-[15vw]">
-                <img src="../src/assets/First Arrow.png" alt="Down Arrow" className="mx-auto" />
+                <img src={first_arrow} alt="Down Arrow" className="mx-auto" />
             </section>
 
             <section id="about" className="scroll-mt-[10vw]">
                 <div className="grid grid-cols-2 gap-6 items-center">
                     <div className="relative flex flex-col justify-center items-center">
-                        <img src="../src/assets/Group 34.png" className="absolute z-[1] top-[-2vw] left-[14vw]" />
+                        <img src={Group_34} className="absolute z-[1] top-[-2vw] left-[14vw]" />
                         <h2 className="relative text-4xl font-montserrat text-[#000000] z-[9999] font-semibold text-center pb-[1vw]">Get to know <span className="text-[#3479E3]">Me</span></h2>
-                        <img src="../src/assets/Group 42.png" className="absolute z-[0] top-[-0.5vw] left-[29vw]" />
+                        <img src={Group_42} className="absolute z-[0] top-[-0.5vw] left-[29vw]" />
                     </div>
                     <div className="mr-[2vw] flex flex-col">
                         <p className="text-black text-base font-normal text-left font-Montserrat">
@@ -248,7 +262,7 @@ const MainPage = () => {
             </section>
 
             <section className="py-[15vw]">
-                <img src="../src/assets/First Arrow.png" alt="Down Arrow" className="mx-auto" />
+                <img src={first_arrow} alt="Down Arrow" className="mx-auto" />
             </section>
 
             <section id="contact" className="mx-[5vw] pb-[12vw] relative flex ">
@@ -297,27 +311,27 @@ const MainPage = () => {
                 <div id="socials" className="flex flex-col mt-[1vw] ml-[3vw] gap-y-[1vw]">
                     <a href="http://www.linkedin.com/in/christian-a-wilkins" className="flex items-center gap-x-[15px]">
                         <div className="bg-blue-500/20 rounded-[59px] shadow-[0px_4px_24px_-1px_rgba(0,0,0,0.25)] backdrop-blur-[20px]">
-                            <img src="../src/assets/LinkedIn.png" alt="LinkedIn Logo" className="w-[3vw] h-[3vw] p-[10px]" />
+                            <img src={LinkedIn} alt="LinkedIn Logo" className="w-[3vw] h-[3vw] p-[10px]" />
                         </div>
                         <p className="text-black text-base font-normal text-center italic font-lato">LinkedIn</p>
                     </a>
                     <a href="https://github.com/Cawwilkins" className="flex items-center gap-x-[15px]">
                         <div className="bg-blue-500/20 rounded-[59px] shadow-[0px_4px_24px_-1px_rgba(0,0,0,0.25)] backdrop-blur-[20px]">
-                            <img src="../src/assets/github 1.png" alt="GitHub Logo" className="w-[3vw] h-[3vw] p-[10px]" />
+                            <img src={GitHub} alt="GitHub Logo" className="w-[3vw] h-[3vw] p-[10px]" />
                         </div>
                         <p className="text-black text-base font-normal text-center italic font-lato">GitHub</p>
                     </a>
                     <a href="mailto:ChristianWilkinsInfo@gmail.com" className="flex items-center gap-x-[15px]">
                         <div className="bg-blue-500/20 rounded-[59px] shadow-[0px_4px_24px_-1px_rgba(0,0,0,0.25)] backdrop-blur-[20px]">
-                            <img src="../src/assets/mail.png" alt="Mail Logo" className="w-[3vw] h-[3vw] p-[10px]" />
+                            <img src={Mail} alt="Mail Logo" className="w-[3vw] h-[3vw] p-[10px]" />
                         </div>
                         <p className="text-black text-base font-normal text-center italic font-lato">E-Mail</p>
                     </a>
                 </div>
                 <div className="relative flex flex-col justify-center items-center ml-[20vw]">
-                    <img src="../src/assets/Group 34.png" className="absolute z-[1] top-[8vw] left-[-3vw]" />
+                    <img src={Group_34} className="absolute z-[1] top-[8vw] left-[-3vw]" />
                     <h2 className="relative text-4xl font-montserrat text-[#000000] z-[9999] font-semibold text-center pb-[1vw]">Let me get to know <span className="text-[#3479E3]">You</span></h2>
-                    <img src="../src/assets/Group 42.png" className="absolute z-[0] top-[9.5vw] left-[19.5vw]" />
+                    <img src={Group_42} className="absolute z-[0] top-[9.5vw] left-[19.5vw]" />
                 </div>
             </section>
         </main>
