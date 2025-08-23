@@ -12,50 +12,43 @@ import linkedin from "../assets/LinkedIn.png"
 import mail from "../assets/mail.png"
 import proj1 from "../assets/Proj1.png"
 
-const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const formE1 = e.currentTarget;
-
-    console.log("Submitting message:", message);
-
-    try {
-        const res = await fetch('/api/messageHandler', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, subject, message }),
-        });
-
-        // for debugging
-        const debugBody = await res.clone().text(); 
-        console.log('messageHandler API → status:', res.status, 'body:', debugBody);
-        console.log("Response status:", res.status);
-
-        const payload = await res.json().catch(() => ({}));
-
-        if (res.ok) {
-            alert("Message has been sent! I will follow-up with you as soon as possible\n Thank you for visiting!");
-            setSubject('');
-            setEmail('');
-            setMessage('');
-            formE1.reset();
-        } else if (res.status === 400) {
-            alert(payload.error || "Invalid email");
-        } else {
-            console.error('Unexpected: ', res.status, payload);
-            alert("Something went wrong, please try again later.");
-        }
-    } catch (err) {
-        console.error("Error during fetch:", err);
-        alert("Network error. Check console.");
-    }
-};
-
 
 const MainPage = () => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const formE1 = e.currentTarget;
+
+        try {
+            const res = await fetch('/api/messageHandler', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, subject, message }),
+            });
+
+            const payload = await res.json().catch(() => ({}));
+
+            if (res.ok) {
+                alert("Message has been sent! I will follow-up with you as soon as possible\n Thank you for visiting!");
+                setSubject('');
+                setEmail('');
+                setMessage('');
+                formE1.reset();
+            } else if (res.status === 400) {
+                alert(payload.error || "Invalid email");
+            } else {
+                console.error('Unexpected: ', res.status, payload);
+                alert("Something went wrong, please try again later.");
+            }
+        } catch (err) {
+            console.error("Error during fetch:", err);
+            alert("Network error. Check console.");
+        }
+    };
 
     return (
         <main className="bg-[#fffafa] scroll-smooth">

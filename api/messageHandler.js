@@ -4,12 +4,12 @@ export default async function handler(req, res) {
     if (req.method !== 'POST')
         return res.status(405).end();
 
-    if (!email || !subject || !message){
-        return res.status(400).json({error: "Missing email, subject, or message." });
-    }
-
     try {
         const { email, subject, message } = req.body;
+
+        if (!email || !subject || !message){
+            return res.status(400).json({error: "Missing email, subject, or message." });
+        }
 
         // Send email notification to self
         const transporter = nodemailer.createTransport({
