@@ -1,16 +1,16 @@
 import { useState } from "react";
-import {ant1} from "../assets/Ant1.png"
-import {ant2} from "../assets/Ant2.png"
-import {bottom_glass} from "../assets/bottom_glass.png"
-import {bubbles} from "../assets/bubbles.png"
-import {first_arrow} from "../assets/Arrow.png"
-import {github_1} from "../assets/github.png"
-import {Group_34} from "../assets/Group_34.png"
-import {Group_42} from "../assets/Group_42.png"
-import {headshot} from "../assets/headshot.png"
-import {linkedin} from "../assets/LinkedIn.png"
-import {mail} from "../assets/mail.png"
-import {proj1} from "../assets/Proj1.png"
+import ant1 from "../assets/Ant1.png"
+import ant2 from "../assets/Ant2.png"
+import bottom_glass from "../assets/bottom_glass.png"
+import bubbles from "../assets/bubbles.png"
+import first_arrow from "../assets/Arrow.png"
+import github_1 from "../assets/github.png"
+import Group_34 from "../assets/Group_34.png"
+import Group_42 from "../assets/Group_42.png"
+import headshot from "../assets/headshot.png"
+import linkedin from "../assets/LinkedIn.png"
+import mail from "../assets/mail.png"
+import proj1 from "../assets/Proj1.png"
 
 const handleSubmit = async (e) => {
     e.preventDefault();
