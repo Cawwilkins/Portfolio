@@ -13,21 +13,22 @@ export default async function handler(req, res) {
 
         // Send email notification to self
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
-        }
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            }
         });
-        const recipients = [process.env.MAIN_EMAIL, process.env.EMAIL_USER].filter(Boolean);
 
-        if (!recipients.length) {
+        if (!process.env.EMAIL_USER) {
             throw new Error("No recipients configured");
         }
 
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: recipients,
+            to: process.env.EMAIL_USER,
             subject: 'New Message from Portfolio Site',
             text: `Subject: ${subject}\n\nEmail: ${email}\n\nMessage: ${message}`,
        });
