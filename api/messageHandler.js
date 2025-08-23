@@ -19,10 +19,15 @@ export default async function handler(req, res) {
             pass: process.env.EMAIL_PASS,
         }
         });
+        const recipients = [process.env.MAIN_EMAIL, process.env.EMAIL_USER].filter(Boolean);
+
+        if (!recipients.length) {
+            throw new Error("No recipients configured");
+        }
 
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER,
+            to: recipients,
             subject: 'New Message from Portfolio Site',
             text: `Subject: ${subject}\n\nEmail: ${email}\n\nMessage: ${message}`,
        });

@@ -180,10 +180,10 @@ const MainPage = () => {
                 </div>
                 <div className="grid grid-cols-3 gap-6 items-center">
                     <div className="justify-start">
-                        <div className="text-black text-base font-lato"> <span className="font-semibold">Design:</span> Figma <br /> <span className="font-semibold">Front-End:</span> HTML, Tailwind CSS, JavaScript, and React <br /> <span className="font-semibold">Back-End:</span> Python, TBD <br /> <span className="font-semibold">Deployment:</span> TBD (Front-End), TBD (Back-End), GitHub (Full-Stack)</div>
+                        <div className="text-black text-base font-lato"> <span className="font-semibold">Design:</span> Figma <br /> <span className="font-semibold">Front-End:</span> HTML, Tailwind CSS, JavaScript, and React (+ Vite) <br /> <span className="font-semibold">Back-End:</span> Python, TBD <br /> <span className="font-semibold">Deployment:</span> TBD (Front-End), TBD (Back-End), GitHub (Full-Stack)</div>
                     </div>
                     <div className="justify-start">
-                        <div className="text-black text-base font-lato"> <span className="font-semibold">Design:</span> Figma <br /> <span className="font-semibold">Front-End:</span> HTML, Tailwind CSS, JavaScript, and React <br /> <span className="font-semibold">Back-End:</span> Python (with Flask), PostgreSQL (via Supabase) <br /> <span className="font-semibold">Deployment:</span> Vercel (Front-End), Railway (Back-End), GitHub (Full-Stack)</div>
+                        <div className="text-black text-base font-lato"> <span className="font-semibold">Design:</span> Figma <br /> <span className="font-semibold">Front-End:</span> HTML, Tailwind CSS, JavaScript, and React (+ Vite) <br /> <span className="font-semibold">Back-End:</span> Python (with Flask), PostgreSQL (via Supabase) <br /> <span className="font-semibold">Deployment:</span> Vercel (Front-End), Railway (Back-End), GitHub (Full-Stack)</div>
                     </div>
                     <div className="justify-start">
                         <div className="text-black text-base font-lato"> <span className="font-semibold">Design:</span> Figma <br /> <span className="font-semibold">Front-End:</span> Javascript, React Native <br /> <span className="font-semibold">Back-End: </span> TBD <br /> <span className="font-semibold">Deployment:</span> TBD (Front-End), TBD (Back-End), GitHub (Full-Stack)</div>
