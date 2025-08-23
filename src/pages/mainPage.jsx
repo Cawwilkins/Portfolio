@@ -23,33 +23,25 @@ const MainPage = () => {
 
         const formE1 = e.currentTarget;
 
-        try {
-            const res = await fetch('/api/messageHandler', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, subject, message }),
-            });
+        // inside your submit handler
+        const r = await fetch("/api/messageHandler", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, subject, message }),
+        });
 
-            const payload = await res.json().catch(() => ({}));
+        let j = null;
+        try { j = await r.json(); } catch { /* leave j as null if no JSON */ }
 
-            
-            if (res.ok) {
-                alert("Message has been sent! I will follow-up with you as soon as possible\n Thank you for visiting!");
-                setSubject('');
-                setEmail('');
-                setMessage('');
-                formE1.reset();
-            } else if (res.status === 400) {
-                alert(payload.error || "Invalid email");
-            } else {
-                console.error('Unexpected: ', res.status, payload);
-                alert("Something went wrong, please try again later.");
-            }
-        } catch (err) {
-            console.error("Error during fetch:", err);
-            alert("Network error. Check console.");
+        if (!r.ok) {
+            const msg = j?.error || `Server error (${r.status})`;
+            alert(msg);      // or show inline UI
+            console.error("Contact error:", j || { status: r.status });
+            return;
         }
-    };
+
+        alert(j?.message || "Sent!");
+    }
 
     return (
         <main className="bg-[#fffafa] scroll-smooth">
@@ -270,7 +262,7 @@ const MainPage = () => {
                             backdrop-blur-[20px] 
                             hover:bg-white/20 hover:border-white/40 hover:shadow-[0px_8px_32px_rgba(0,0,0,0.37)]
                             transition-all duration-500" placeholder="Email" required/>
-                        <input type="subject" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} className="z-[8000] w-[20vw] px-[1vw] py-[0.5vw] text-black
+                        <input type="text" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)} className="z-[8000] w-[20vw] px-[1vw] py-[0.5vw] text-black
                             bg-blue-500/20 
                             rounded-[59px]
                             bg-gradient-to-r
