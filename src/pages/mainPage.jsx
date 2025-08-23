@@ -32,6 +32,7 @@ const MainPage = () => {
 
             const payload = await res.json().catch(() => ({}));
 
+            
             if (res.ok) {
                 alert("Message has been sent! I will follow-up with you as soon as possible\n Thank you for visiting!");
                 setSubject('');
