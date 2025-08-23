@@ -3,12 +3,10 @@ import {ant1} from "../assets/Ant1.png"
 import {ant2} from "../assets/Ant2.png"
 import {bottom_glass} from "../assets/bottom_glass.png"
 import {bubbles} from "../assets/bubbles.png"
-import {first_arrow} from "../assets/First Arrow.png"
-import {github_1} from "../assets/github_1.png"
-import {Group_34_sm} from "../assets/Group_34-small.png"
+import {first_arrow} from "../assets/Arrow.png"
+import {github_1} from "../assets/github.png"
 import {Group_34} from "../assets/Group 34.png"
 import {Group_42} from "../assets/Group 42.png"
-import {group_42_sm} from "../assets/Group_42-small.png"
 import {headshot} from "../assets/headshot.png"
 import {linkedin} from "../assets/LinkedIn.png"
 import {mail} from "../assets/mail.png"
@@ -138,14 +136,14 @@ const MainPage = () => {
                     <div className="relative group w-full overflow-hidden">
                     {/* Base image */}
                     <img
-                        src={Ant1}
+                        src={ant1}
                         alt="Project default"
                         className="w-full object-cover block"
                     />
 
                     {/* Hover image (doesn't receive pointer events; fades in on group hover/focus) */}
                     <img
-                        src={Ant2}
+                        src={ant2}
                         alt="Project hover"
                         className="absolute inset-0 w-full h-full object-cover
                                     opacity-0 transition-opacity duration-500
