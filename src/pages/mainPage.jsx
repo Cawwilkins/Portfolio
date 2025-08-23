@@ -4,11 +4,11 @@ import {ant2} from "../assets/Ant2.png"
 import {bottom_glass} from "../assets/bottom_glass.png"
 import {bubbles} from "../assets/bubbles.png"
 import {first_arrow} from "../assets/First Arrow.png"
-import {github_1} from "../assets/github 1.png"
-import {Group_34_sm} from "../assets/Group 34-small.png"
+import {github_1} from "../assets/github_1.png"
+import {Group_34_sm} from "../assets/Group_34-small.png"
 import {Group_34} from "../assets/Group 34.png"
 import {Group_42} from "../assets/Group 42.png"
-import {group_42_sm} from "../assets/Group 42-small.png"
+import {group_42_sm} from "../assets/Group_42-small.png"
 import {headshot} from "../assets/headshot.png"
 import {linkedin} from "../assets/LinkedIn.png"
 import {mail} from "../assets/mail.png"
@@ -311,19 +311,19 @@ const MainPage = () => {
                 <div id="socials" className="flex flex-col mt-[1vw] ml-[3vw] gap-y-[1vw]">
                     <a href="http://www.linkedin.com/in/christian-a-wilkins" className="flex items-center gap-x-[15px]">
                         <div className="bg-blue-500/20 rounded-[59px] shadow-[0px_4px_24px_-1px_rgba(0,0,0,0.25)] backdrop-blur-[20px]">
-                            <img src={LinkedIn} alt="LinkedIn Logo" className="w-[3vw] h-[3vw] p-[10px]" />
+                            <img src={linkedin} alt="LinkedIn Logo" className="w-[3vw] h-[3vw] p-[10px]" />
                         </div>
                         <p className="text-black text-base font-normal text-center italic font-lato">LinkedIn</p>
                     </a>
                     <a href="https://github.com/Cawwilkins" className="flex items-center gap-x-[15px]">
                         <div className="bg-blue-500/20 rounded-[59px] shadow-[0px_4px_24px_-1px_rgba(0,0,0,0.25)] backdrop-blur-[20px]">
-                            <img src={GitHub} alt="GitHub Logo" className="w-[3vw] h-[3vw] p-[10px]" />
+                            <img src={github_1} alt="GitHub Logo" className="w-[3vw] h-[3vw] p-[10px]" />
                         </div>
                         <p className="text-black text-base font-normal text-center italic font-lato">GitHub</p>
                     </a>
                     <a href="mailto:ChristianWilkinsInfo@gmail.com" className="flex items-center gap-x-[15px]">
                         <div className="bg-blue-500/20 rounded-[59px] shadow-[0px_4px_24px_-1px_rgba(0,0,0,0.25)] backdrop-blur-[20px]">
-                            <img src={Mail} alt="Mail Logo" className="w-[3vw] h-[3vw] p-[10px]" />
+                            <img src={mail} alt="Mail Logo" className="w-[3vw] h-[3vw] p-[10px]" />
                         </div>
                         <p className="text-black text-base font-normal text-center italic font-lato">E-Mail</p>
                     </a>
