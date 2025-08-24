@@ -206,8 +206,8 @@ const MainPage = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="Open antrevo.com"
-                        className="absolute inset-0 z-20"
-                    />      
+                        className="absolute inset-0 z-20 pointer-events-none"
+                    />
 
                     {/* Smaller hotspots above the full-card link */}
                     <a
@@ -222,7 +222,7 @@ const MainPage = () => {
                         href="https://docs.google.com/presentation/d/1YpTxbSIjmIfVQz-zefqpc-Ujsx8tgdP5/edit?usp=sharing&ouid=115282926745936384532&rtpof=true&sd=true"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="absolute bottom-[30px] right-[25px] w-[180px] h-[55px] z-30"
+                        className="absolute bottom-[145px] right-[25px] w-[180px] h-[80px] z-[999]"
                         aria-label="Open AntrEvo Case Study"
                     ></a>
                 <div className="items-center">
