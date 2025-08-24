@@ -57,7 +57,7 @@ export default async function handler(req, res) {
 
     await transporter.sendMail({
       from: `Portfolio Contact Form <${EMAIL_USER}>`,
-      to,
+      to: [MAIN_EMAIL, EMAIL_USER].filter(Boolean),
       subject: "New Message from Portfolio Site",
       text: `Subject: ${subject}\n\nFrom: ${email}\n\nMessage:\n${message}`,
       replyTo: email,
