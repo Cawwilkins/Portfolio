@@ -219,7 +219,7 @@ const MainPage = () => {
                     ></a>
 
                     <a
-                        href="https://docs.google.com/presentation/d/1YpTxbSIjmIfVQz-zefqpc-Ujsx8tgdP5/edit?usp=sharing&ouid=115282926745936384532&rtpof=true&sd=true"
+                        href="https://docs.google.com/presentation/d/1MFMOpOc4gfDnG0QyUCvh8HfeO8sBWYH_/edit?usp=sharing&ouid=113506584137564414743&rtpof=true&sd=true"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="absolute bottom-[145px] right-[25px] w-[180px] h-[80px] z-[999]"
