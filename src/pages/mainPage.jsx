@@ -205,13 +205,13 @@ const MainPage = () => {
                         href="https://antrevo.com"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="absolute inset-0 z-20"
                         aria-label="Open antrevo.com"
-                        className="absolute inset-0 z-20 pointer-events-none"
                     />
 
                     {/* Smaller hotspots above the full-card link */}
                     <a
-                        href="https://github.com/Cawwilkins/AntrEvo"
+                        href="https://github.com/Cawwilkins/antrevo_public_showcase"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="absolute top-[20px] left-[26px] w-[95px] h-[70px] z-30"
@@ -277,7 +277,7 @@ const MainPage = () => {
 
                     {/* Smaller hotspots above the full-card link */}
                     <a
-                        href="https://github.com/Cawwilkins/AntrEvo"
+                        href="https://github.com/Cawwilkins/antrevo_public_showcase"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="absolute top-[20px] left-[26px] w-[95px] h-[70px] z-30"
